@@ -3,7 +3,7 @@ layout: post
 title: 'Introduction to hierarchies in Analysis Services and Power BI'
 date: 2019-01-08 08:16:53.000000000 +01:00
 type: post
-summary: 'A look at what hierarchies are and how they're used within the context of Analysis Services/Power BI, and some practical examples on how to implement them.'
+summary: 'A look at what hierarchies are and how they''re used within the context of Analysis Services and Power BI, and some practical examples on how to implement them.'
 mermaid: true
 tag: PBI
 image: /attachments/ragged-hierarchy.svg

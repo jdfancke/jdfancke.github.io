@@ -2,7 +2,7 @@
 layout: post
 title: 'BI Theory #6: Analytical Databases'
 date: 2017-11-26 16:05:23.000000000 +01:00
-summary: 'In this post, I'll outline why you don't necessarily want to build your analysis on top of a transactional database, and instead why you'd be better off using (or building!) an analytical database.'
+summary: 'In this post, I''ll outline why you don''t necessarily want to build your analysis on top of a transactional database, and instead why you''d be better off using (or building!) an analytical database.'
 mermaid: true
 tag: PBI
 image: '/attachments/1-different-worlds.png'
