@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'BI Theory \#4: Where to get Power Query and Power Pivot'
+title: 'BI Theory #4: Where to get Power Query and Power Pivot'
 date: 2017-03-02 07:30:29.000000000 +01:00
 summary: 'Now that you know the basic idea behind Power Query and Power Pivot it is time to start downloading them!'
 mermaid: true

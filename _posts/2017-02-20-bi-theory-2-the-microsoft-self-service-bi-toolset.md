@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'BI Theory \#2: The Microsoft Self-Service BI Toolset'
+title: 'BI Theory #2: The Microsoft Self-Service BI Toolset'
 date: 2017-02-20 18:36:00.000000000 +01:00
 summary: 'It’s time to meet the new tools! If you missed the introduction explaining why you might want to use these tools, check out my last post.'
 mermaid: true
