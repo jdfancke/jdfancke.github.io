@@ -2,7 +2,7 @@
 layout: post
 title: 'BI Theory #5: What are databases?'
 date: 2017-11-04 16:36:07.000000000 +01:00
-summary: 'BI Theory #5: What are databases?'
+summary: 'A database stores and organizes digital information. The way data is organized within the database allows it to be specialized for different scenarios. This results in different types of databases.'
 mermaid: true
 tag: PBI
 image: '/attachments/asset-13.png'

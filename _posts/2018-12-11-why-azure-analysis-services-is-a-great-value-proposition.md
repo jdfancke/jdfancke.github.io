@@ -2,9 +2,10 @@
 layout: post
 title: 'Why Azure Analysis Services is a great value proposition'
 date: 2018-12-11 00:18:20.000000000 +01:00
-summary: 'Why Azure Analysis Services is a great value proposition'
+summary: 'Azure Analysis Services continues to provide excellent value for money while maintaining strong administration controls and source control capability.'
 mermaid: true
 tag: PBI
+image: '/attachments/Analysis-Service.png'
 ---
 
 **Update**: after waking up this morning I realized there was just one more item I wanted to add, the suitability of AAS for multi-geo environments, which for many can be a deal breaker.

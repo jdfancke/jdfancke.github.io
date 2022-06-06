@@ -2,7 +2,7 @@
 layout: post
 title: 'Converting from UTC to Local Timezone in Power BI and Azure Analysis Services'
 date: 2018-12-15 07:25:28.000000000 +01:00
-summary: 'Converting from UTC to Local Timezone in Power BI and Azure Analysis Services'
+summary: 'Converting from UTC to Local Timezone in Power BI and Azure Analysis Services is a common issue due to the servers using UTC time, this post explains how to work around this issue.'
 mermaid: true
 tag: PBI
 ---

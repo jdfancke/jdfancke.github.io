@@ -2,7 +2,8 @@
 layout: post
 title: 'Power BI Datamarts First Impressions'
 date: 2022-05-30 07:32:39.000000000 +02:00
-summary: Power BI Datamarts First Impressions
+summary: 'My first impressions of the Power BI Datamarts feature announced at Microsoft Build 2022.'
+image: /attachments/power-bi-datamarts4.png
 ---
 Last week at [Microsoft Build](https://mybuild.microsoft.com/en-US/sessions/880c2556-1f8e-4e4c-89ac-77c4149cdf93?source=/schedule) the Power BI team announced Datamarts for Power BI. ([Main blog post](https://powerbi.microsoft.com/en-us/blog/announcing-public-preview-of-datamart-in-power-bi/), [Mechanics demo video](https://youtu.be/QxrUJCbcGy4))
 
@@ -86,6 +87,7 @@ I'm not convinced about the forcing of DirectQuery onto us or the requirements t
 
 The story of dataflows, Datamarts, and people comparing them is confusing. To simplify this story I really think the Power BI team should position dataflows as a tool to transfer data from source systems into a storage destination (whether that be datalake storage or relational database storage).
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Allowing dataflows to choose their destination simplifies the story for users:<br>- a dataflow is a way to get data from source systems into a storage destination<br>- you can pick either basic datalake storage (CSVs+manifest/typing) or richer relational database storage (Azure SQL DB)</p>&mdash; James Fancke (@jdfancke) <a href="https://twitter.com/jdfancke/status/1530825708607619073?ref_src=twsrc%5Etfw">May 29, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div align="center">
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Allowing dataflows to choose their destination simplifies the story for users:<br>- a dataflow is a way to get data from source systems into a storage destination<br>- you can pick either basic datalake storage (CSVs+manifest/typing) or richer relational database storage (Azure SQL DB)</p>&mdash; James Fancke (@jdfancke) <a href="https://twitter.com/jdfancke/status/1530825708607619073?ref_src=twsrc%5Etfw">May 29, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
 Finally, I read a decent [blog post by Mim](https://datamonkeysite.com/2022/05/25/first-look-at-datamart/) that also has more specific detail behind Datamarts and recommend giving it a read.

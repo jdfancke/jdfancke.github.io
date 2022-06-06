@@ -16,7 +16,7 @@ layout: default
 	    {% endif %}
 	  </p>
           <a href="{{ post.url | relative_url }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
-          <div align="center"><img src="{{ site.baseurl }}{{ post.image }}" width="350"></div>
+          <div align="center" style="padding-bottom: 1rem;"><img src="{{ site.baseurl }}{{ post.image }}" width="350"></div>
           <span class="post-summary">
             {% if post.summary %}
               {{ post.summary }}

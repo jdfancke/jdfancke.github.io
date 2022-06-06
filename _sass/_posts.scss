@@ -28,7 +28,7 @@
 }
 
 .post-footer .avatar {
-  margin: 2rem 0;
+  margin: 0.5rem 0;
   width: 100px;
   border-radius: 50%;
 }
@@ -45,4 +45,30 @@
 
 .related-post-title {
   border-bottom: thin solid #f3f3f3;
+}
+
+// Page Navigation
+.PageNavigation {
+ font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 2em 0;
+}
+
+.PageNavigation .next {
+  text-align: right;
+}
+
+//iframe class
+.frame-pardot {
+  min-height:300px;
+  max-height:800px;
+  width:100%;
 }

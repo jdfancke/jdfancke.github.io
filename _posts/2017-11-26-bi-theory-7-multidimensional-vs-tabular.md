@@ -2,7 +2,7 @@
 layout: post
 title: 'BI Theory #7: Multidimensional vs Tabular'
 date: 2017-11-26 20:43:35.000000000 +01:00
-summary: 'BI Theory #7: Multidimensional vs Tabular'
+summary: 'In this post, I’m going to do a quick comparison between multidimensional and tabular data models, and hopefully give you some intuition about why they have the features that they do.'
 mermaid: true
 tag: PBI
 image: '/attachments/asset-1.png'

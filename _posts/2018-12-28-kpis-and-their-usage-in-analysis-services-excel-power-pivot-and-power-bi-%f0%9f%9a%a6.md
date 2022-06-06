@@ -2,9 +2,10 @@
 layout: post
 title: 'KPIs #1: KPI usage in Analysis Services, Excel Power Pivot, and Power BI 🚦'
 date: 2018-12-28 12:29:54.000000000 +01:00
-summary: 'KPIs #1: KPI usage in Analysis Services, Excel Power Pivot, and Power BI 🚦'
+summary: 'An introduction to the "KPIs" feature in Analysis Services and how you're able to use them in Power BI.'
 mermaid: true
 tag: PBI
+image: /attachments/kpi-header-image.svg
 ---
 KPIs, or Key Performance Indicators, are a common way to gauge performance against a set of objectives, and are an integral part of performance management.
 

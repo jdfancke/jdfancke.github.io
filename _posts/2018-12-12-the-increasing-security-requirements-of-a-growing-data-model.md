@@ -2,9 +2,10 @@
 layout: post
 title: 'The increasing security requirements of a growing data model'
 date: 2018-12-12 22:52:30.000000000 +01:00
-summary: 'The increasing security requirements of a growing data model'
+summary: 'This post details what options you have for adding security into your growing data model.'
 mermaid: true
 tag: PBI
+image: '/attachments/secure-data-model.svg'
 ---
 **Update**: *Power BI Premium has been updated to now include Object Level Security.*
 

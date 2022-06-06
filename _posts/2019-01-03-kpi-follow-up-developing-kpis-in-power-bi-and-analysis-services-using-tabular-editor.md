@@ -2,9 +2,10 @@
 layout: post
 title: 'KPIs #2: Developing KPIs in Power BI and Analysis Services using Tabular Editor'
 date: 2019-01-03 09:59:32.000000000 +01:00
-summary: 'KPIs #2: Developing KPIs in Power BI and Analysis Services using Tabular Editor'
+summary: 'Some further observations when developing KPIs witin Power BI and Analysis Services.'
 mermaid: true
 tag: PBI
+image: /attachments/kpi-header-image.svg
 ---
 KPIs, or Key Performance Indicators, are a common way to gauge performance against a set of objectives, and are an integral part of performance management.
 

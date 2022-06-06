@@ -2,9 +2,10 @@
 layout: post
 title: 'Workarounds for Analysis Services database admins without server admin access'
 date: 2018-12-22 09:03:19.000000000 +01:00
-summary: 'Workarounds for Analysis Services database admins without server admin access'
+summary: 'I take a look at some limitations that database admins face when administering their Analysis Services databases without having server admin access and provide some workarounds for common issues.'
 mermaid: true
 tag: PBI
+image: /attachments/Analysis-Service.png
 ---
 _This is a somewhat obscure topic, but I hope that others (if they ever find themselves in this position) find it useful!_
 

@@ -2,13 +2,12 @@
 layout: post
 title: 'BI Theory #2: The Microsoft Self-Service BI Toolset'
 date: 2017-02-20 18:36:00.000000000 +01:00
-summary: 'BI Theory #2: The Microsoft Self-Service BI Toolset'
+summary: 'It’s time to meet the new tools! If you missed the introduction explaining why you might want to use these tools, check out my last post.'
 mermaid: true
 tag: PBI
 image: '/attachments/1-pppq.png'
 ---
 ***Disclaimer***: With the release of additional external tools such as Tabular Editor, ALM Toolkit, and DAX Studio there is less usage of Visual Studio. 
-
 
 It’s time to meet the new tools! If you missed the introduction explaining why you might want to use these tools, check out my last post [here]({% post_url 2016-11-12-bi-theory-1-an-introduction-to-the-changing-world-of-self-service-bi %}).
 

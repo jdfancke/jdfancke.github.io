@@ -2,9 +2,10 @@
 layout: post
 title: 'How to automate (Azure) Analysis Services processing from a remote PC'
 date: 2018-12-14 20:56:47.000000000 +01:00
-summary: 'How to automate (Azure) Analysis Services processing from a remote PC'
+summary: 'A local SQL Server agent is unable to easily execute process commands against a remote Azure Analysis Services instance. This post details how to overcome this difficulty while also not having server administration rights.'
 mermaid: true
 tag: PBI
+image: '/attachments/Analysis-Service.png'
 ---
 There are many blog posts showing how to automate processing of a SQL Server Analysis Services model using either the SQL server agent or SSIS.
 

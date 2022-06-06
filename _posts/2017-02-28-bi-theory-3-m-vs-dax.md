@@ -2,7 +2,7 @@
 layout: post
 title: 'BI Theory #3: PQFL (“M”) vs DAX'
 date: 2017-02-28 07:30:48.000000000 +01:00
-summary: 'BI Theory #3: PQFL (“M”) vs DAX'
+summary: 'In this post I hope to give a brief comparison of M (formerly "PQFL") and DAX.'
 mermaid: true
 tag: PBI
 image: '/attachments/asset-11.png'

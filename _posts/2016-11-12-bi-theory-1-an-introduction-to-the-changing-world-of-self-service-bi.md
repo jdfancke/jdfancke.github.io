@@ -2,7 +2,7 @@
 layout: post
 title: 'BI Theory #1: An introduction to the changing world of self-service BI'
 date: 2016-11-12 20:36:01.000000000 +01:00
-summary: 'BI Theory #1: An introduction to the changing world of self-service BI'
+summary: 'It seems like the best way to start a blog is with an introduction, but instead of boring you with my life’s details let’s just jump straight into it.'
 mermaid: true
 tag: PBI
 image: /attachments/asset-18.png
