@@ -4,7 +4,7 @@ email:
 author:      James Fancke
 description: "Business intelligence and analytics for the everyday analyst"
 baseurl:     ""
-url:         "https://selfservedbi.com"
+url:         "https://www.selfservedbi.com"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
