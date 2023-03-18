@@ -49,17 +49,6 @@ layout: default
   {% include post_footer.html %}
 {% endif %}
 
-<!-- Hyvor Talk Addin begin -->
-<div id="hyvor-talk-view"></div>
-<script type="text/javascript">
-    var HYVOR_TALK_WEBSITE = 7184;
-    var HYVOR_TALK_CONFIG = {
-        url: false,
-        id: '{{page.id}}'
-    };
-</script>
-<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
-<!--  Hyvor talk Addin end -->
 
 {% if site.show_related_posts %}
   <h3 class="related-post-title">{{ site.text.post.related_posts | default: "Related Posts" }}</h3>

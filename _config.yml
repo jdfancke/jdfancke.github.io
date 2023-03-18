@@ -16,7 +16,7 @@ google_verification:
 # Use either direct GA implementation or set up GTM account
 # - using both will skew your data (leave blank to not use at all)
 google_analytics:
-google_tag_manager: G-98F3NNX3CT
+google_tag_manager:
 # Bing services
 bing_verification:
 
@@ -39,7 +39,7 @@ fb_page_id:
 
 # Disqus post comments
 # (leave blank to disable Disqus)
-disqus_shortname:
+disqus_shortname: "jamesfancke"
 
 # Facebook Comments plugin
 # (leave blank to disable Facebook Comments, otherwise set it to true)
