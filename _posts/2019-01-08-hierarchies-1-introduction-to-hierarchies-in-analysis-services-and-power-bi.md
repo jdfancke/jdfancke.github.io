@@ -104,7 +104,7 @@ A ragged hierarchy is a hierarchy where not all items have children objects down
 
 Patrick Leblanc has a great video explaining this topic (below), but essentially a ragged hierarchy is one where there are blanks in your hierarchy, and that your blank members only have blank child members.
 
-<div align="center"><iframe class = "frame-pardot" width="100%" height = "100%" src="https://www.youtube.com/embed/4Km6HmydY7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div align="center"><iframe class = "frame-pardot" width="100%" height = "100%" src="https://www.youtube-nocookie.com/embed/4Km6HmydY7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 Ragged hierarchies are supported in 1400 compatibility level models, and possible in Power BI Analyze in Excel, but [not yet officially supported (as of January 2019) by Power BI visuals](https://community.powerbi.com/t5/Issues/Hierarchy-blanks-issue/idi-p/221123) (they ignore the HideMembers property). See the [feature request here](https://ideas.powerbi.com/forums/265200-power-bi-ideas/suggestions/14511612-ragged-or-parent-child-hierarchy-visuals).
 
