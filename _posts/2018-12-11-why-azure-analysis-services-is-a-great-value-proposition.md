@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Why Azure Analysis Services is a great value proposition'
-date: 2018-12-11 00:18:20.000000000 +01:00
+date: 2018-12-11 08:16:53.000000000 +01:00
 summary: 'Azure Analysis Services continues to provide excellent value for money while maintaining strong administration controls and source control capability.'
 mermaid: true
 tag: PBI
