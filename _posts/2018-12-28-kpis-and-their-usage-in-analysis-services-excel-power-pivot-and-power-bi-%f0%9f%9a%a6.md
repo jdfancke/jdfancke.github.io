@@ -6,7 +6,7 @@ summary: 'An introduction to the KPIs feature in Analysis Services and how you''
 mermaid: true
 tag: PBI
 image: /attachments/kpi-header-image.svg
-permalink: /2018/12/28/kpis-and-their-usage-in-analysis-services-excel-power-pivot-and-power-bi-%f0%9f%9a%a6
+permalink: /2018/12/28/kpis-and-their-usage-in-analysis-services-excel-power-pivot-and-power-bi-%f0%9f%9a%a6/
 ---
 KPIs, or Key Performance Indicators, are a common way to gauge performance against a set of objectives, and are an integral part of performance management.
 
