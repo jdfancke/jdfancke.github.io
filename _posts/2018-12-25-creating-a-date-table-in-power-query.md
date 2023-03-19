@@ -5,9 +5,9 @@ date: 2018-12-25 09:08
 tags: ["Power Query"]
 summary: 'How to make a date table in Power Query’s M language and what fields I think are important to include.'
 mermaid: true
-
+comments: true
 ---
-{% raw %}
+
 _I use "columns" and "fields" interchangeably in this post._
 
 There are many posts out there showing how to create a date table and I believe this is because it's a common problem that almost everyone encounters when first making a data model in Power BI, Excel, or Analysis Services.
@@ -91,7 +91,7 @@ I've organized the fields into the 3 groups below:
 ### Building the date table
 **Step 1: Parameters**
 Begin your table by declaring a start date, end date, and optionally the culture to use for month names later on.
-
+{% raw %}
 ```fsharp
 let
 // Enter start and end dates (format YYYY,MM,DD)
@@ -99,9 +99,9 @@ StartDate = #date(2010, 1, 1),
 EndDate = #date(2029, 12, 31),
 Culture = "en-US", // Examples: en-US, nl-NL, zh-ZH, etc.
 ```
-
+{% endraw %}
 Next you want to generate the date list based on your start and end dates.
-
+{% raw %}
 ```fsharp
 // Generate date list from variables above (start and end years), convert list to table, rename, convert to dates
 DayCount = Duration.Days(Duration.From(EndDate - StartDate)) + 1,
@@ -110,7 +110,7 @@ TableConversion = Table.FromList(GenerateDates, Splitter.SplitByNothing(), null,
 RenamedColumns = Table.RenameColumns(TableConversion,{{"Column1", "Date"}}),
 DateTypeChange = Table.TransformColumnTypes(RenamedColumns,{{"Date", type date}}),
 ```
-
+{% endraw %}
 **Step 2: Inserting the year and week**
 Once you have an ordered list of dates, you will want to insert the year and week.
 
@@ -118,7 +118,7 @@ Getting the week number can be tricky if you want to use the ISO standard week n
 
 For reference, here's an old <a href="https://social.technet.microsoft.com/Forums/en-US/2a85c825-c75b-4622-98a1-25547dec49c8/enhancement-request-iso-week-number?forum=powerquery">feature request</a> that explains the issue and hopes for an update to the Date.WeekOfYear function to accept arguments similar to the Excel WEEKNUM function (which can correctly calculate the ISO week number). Interestingly, this has been a feature request for quite a while and is not yet implemented. Calling on <a href="https://twitter.com/mllopis">Miguel Llopsis</a> if he may know of any plans on the drawing board! FYI you can vote for an update to the Date.WeekOfYear function on <a href="https://ideas.powerbi.com/forums/265200-power-bi-ideas/suggestions/13507155-iso-week-number-option-on-date-weekofyear-function">the Power BI Ideas forum here</a>.
 To get your ISO week, use the following code:
-
+{% raw %}
 ```fsharp
 // Insert a standard year, insert a reference date, insert ISO8601 week number using ref date
 InsertYear = Table.AddColumn(DateTypeChange, "Year", each Date.Year([Date]), type number),
@@ -127,7 +127,7 @@ InsertISOWeek = Table.AddColumn(InsertRefDate , "ISOWeek", each
     if Number.IntegerDivide(Duration.Days([Date]-[RefDate])+Date.DayOfWeek([RefDate],0)+7,7) < 1 then 1
     else Number.IntegerDivide(Duration.Days([Date]-[RefDate])+Date.DayOfWeek([RefDate],0)+7,7), type number),
 ```
-
+{% endraw %}
 _Note if you wanted an exact ISO year you can use the below (although I don't use this because financial year-ends are the same date each year):_
 
 ```fsharp
@@ -158,7 +158,7 @@ Worked examples are always very useful, so let's use the 9th and 10th of January
 
 **Step 3: Inserting the months and quarters**
 After getting your weeks sorted, you can then insert the months. If you want calendar months then you can just use Date.Month, otherwise you can use the below series of if statements for how to code for 4-4-5 months.
-
+{% raw %}
 ```fsharp
 // Insert the Month Number based on the Week numbers, change it to the number type
 InsertISOMonth =Table.AddColumn(InsertISOWeek, "ISOMonth", each
@@ -175,9 +175,9 @@ InsertISOMonth =Table.AddColumn(InsertISOWeek, "ISOMonth", each
     if [ISOWeek]<= 47 then "11" else "12"),
 ISOMonthTypeChange = Table.TransformColumnTypes(InsertISOMonth,{{"ISOMonth", type number}}),
 ```
-
+{% endraw %}
 After you've got your month numbers you can insert the corresponding month name. Note that if you add the "culture" parameter defined earlier it will change the language of the month name.
-
+{% raw %}
 ```fsharp
 // Insert the month name that corresponds with the ISOMonth, then reorder the columns
 InsertISOMonthName = Table.AddColumn(ISOMonthTypeChange, "ISOMonthName", each Date.ToText(#date([Year],[ISOMonth],1), "MMMM", Culture)),
@@ -187,20 +187,20 @@ InsertISOQuarter = Table.AddColumn(InsertISOMonthName, "ISOQuarter", each
     if [ISOMonth] <= 9 then "Q3" else "Q4"),
 ISOQuarterTypeChange = Table.TransformColumnTypes(InsertISOQuarter,{{"ISOQuarter", type text}}),
 ```
-
+{% endraw %}
 **Step 4: Insert the combined descriptors**
 For now I'll just be adding in some simple combined descriptors, but you may want to add others or different variants.
-
+{% raw %}
 ```fsharp
 // Insert "YYYY-WWW" column, "YYY-MMM" column, remove the reference date
 InsertYrWk = Table.AddColumn(ISOQuarterTypeChange, "YrWk", each Number.ToText([Year]) &amp; Number.ToText([ISOWeek],"-W00")),
 InsertYrMn = Table.AddColumn(InsertYrWk,"YrMn", each Number.ToText([Year]) &amp; Date.ToText(#date([Year],[ISOMonth],1), "-MMM", Culture)),
 RemoveRefDate = Table.RemoveColumns(InsertYrMn ,{"RefDate"}),
 ```
-
+{% endraw %}
 **Step 5: Insert the indexes**
 One of the final steps is to add in the indexes for use in time intelligence measures.
-
+{% raw %}
 ```fsharp
 // Create ISOWeek Index Table
 ISOWeekIndexTableSelectColumns = Table.SelectColumns(RemoveRefDate,{"Year", "ISOWeek"}),
@@ -215,11 +215,11 @@ ISOQuarterIndexTableSelectColumns = Table.SelectColumns(RemoveRefDate,{"Year", "
 ISOQuarterIndexTableSelectDistinct = Table.Distinct(ISOQuarterIndexTableSelectColumns),
 ISOQuarterIndexTable = Table.AddIndexColumn(ISOQuarterIndexTableSelectDistinct, "ISOQuarterIndex", 1, 1),
 ```
-
+{% endraw %}
 The way that this works is that you're grabbing your most recent step, selecting the year and other column that you want to make an index on, getting their distinct values, and then creating an index column. _Remember, just because the query editor puts each step after the other doesn't mean you can't re-use steps for other purposes._
 
 After creating your index tables you can then join them into your main table:
-
+{% raw %}
 ```fsharp
 // Join Index Tables
 MergedISOWeekIndexTable = Table.NestedJoin(RemoveRefDate,{"Year", "ISOWeek"},ISOWeekIndexTable,{"Year", "ISOWeek"},"NewColumn",JoinKind.LeftOuter),
@@ -229,17 +229,17 @@ ExpandMergedISOMonthIndexTable = Table.ExpandTableColumn(MergedISOMonthIndexTabl
 MergedISOQuarterIndexTable = Table.NestedJoin(ExpandMergedISOMonthIndexTable,{"Year", "ISOQuarter"},ISOQuarterIndexTable,{"Year", "ISOQuarter"},"NewColumn",JoinKind.LeftOuter),
 ExpandMergedISOQuarterIndexTable = Table.ExpandTableColumn(MergedISOQuarterIndexTable, "NewColumn", {"ISOQuarterIndex"}, {"ISOQuarterIndex"}),
 ```
-
+{% endraw %}
 Finally, you may want to do a reorder of your columns and a type change.
-
+{% raw %}
 ```fsharp
 ReorderColumns = Table.ReorderColumns(ExpandMergedISOQuarterIndexTable,{"Date", "Year", "ISOQuarter", "ISOQuarterIndex", "ISOMonth", "ISOMonthName", "ISOMonthIndex", "ISOWeek", "ISOWeekIndex", "YrMn", "YrWk"}),
 TypeChange = Table.TransformColumnTypes(ReorderColumns,{{"Year", Int64.Type}, {"ISOQuarterIndex", Int64.Type}, {"ISOMonth", Int64.Type}, {"ISOMonthIndex", Int64.Type}, {"ISOWeek", Int64.Type}, {"ISOWeekIndex", Int64.Type}})
 in TypeChange
 ```
-
+{% endraw %}
 **All the code in one block can be found below:**
-
+{% raw %}
 ```fsharp
 let
 // Enter start and end dates (format YYYY,MM,DD)
