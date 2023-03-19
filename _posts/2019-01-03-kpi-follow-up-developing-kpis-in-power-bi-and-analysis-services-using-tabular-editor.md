@@ -16,7 +16,7 @@ _This is a follow up to_ _[my post exploring KPIs within Analysis Services]({% p
 I received some feedback from Daniel Otykier _(author of_ _[Tabular Editor](https://tabulareditor.github.io/))_ regarding my last post and it inspired me to dive deeper into how KPIs are handled within Analysis Services, how you can create them using Tabular Editor, as well as their implementation within Power BI.
  
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Great post. I noticed that you can reference any KPI expressions elsewhere in your model, just as if they were another measure: [_Sales Goal], [_Sales Status] and [_Sales Trend] if the base measure is named [Sales]. Also <a href="https://twitter.com/hashtag/TabularEditor?src=hash&amp;ref_src=twsrc%5Etfw">#TabularEditor</a> is great for editing KPIs as well :-)</p>&mdash; Daniel Otykier (@DOtykier) <a href="https://twitter.com/DOtykier/status/1078652533911052288?ref_src=twsrc%5Etfw">December 28, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+ 
 Without wasting any time, below are my observations after a further look into KPIs.
 
 ## Observation 1: KPIs create "hidden" measures that are able to be referenced in other DAX expressions
